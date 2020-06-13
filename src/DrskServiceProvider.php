@@ -1,8 +1,8 @@
 <?php
-namespace mawdoo3\test;
+namespace mawdoo3\drsk;
 
 use Illuminate\Support\ServiceProvider;
-use mawdoo3\test\TaskInstall;
+use mawdoo3\drsk\TaskInstall;
 
 class DrskServiceProvider extends ServiceProvider
 {
