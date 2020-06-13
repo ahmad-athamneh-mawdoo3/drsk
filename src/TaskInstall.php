@@ -1,5 +1,5 @@
 <?php
-namespace mawdoo3\test;
+namespace mawdoo3\drsk;
 
 use Illuminate\Console\Command;
 
@@ -36,7 +36,7 @@ class TaskInstall extends Command
      */
     public function handle()
     {
-        exec("php artisan vendor:publish --provider='mawdoo3\laravelTask\TaskServiceProvider'");
+        exec("php artisan vendor:publish --provider='mawdoo3\drsk\DrskServiceProvider'");
         $this->line("<info>Publishing:</info> Publishing Configration Done");
         exec("php artisan migrate --path=/database/migrations/TaskInstall");
         $this->line("<info>Migrating:</info> Migrating to DB Done");
