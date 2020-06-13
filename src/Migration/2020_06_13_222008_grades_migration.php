@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class SavedResultsMigration extends Migration
+class GradesMigration extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class SavedResultsMigration extends Migration
      */
     public function up()
     {
-        Schema::create('saved_results', function (Blueprint $table) {
+        Schema::create('grades', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title',200)->nullable();
+            $table->string('name',300)->nullable();
             $table->text('description')->nullable();
-            $table->string('link',200)->nullable();
-            $table->text('comment')->nullable();
+            $table->unsignedTinyInteger('school_id')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
@@ -30,6 +29,6 @@ class SavedResultsMigration extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('saved_results');
+        Schema::dropIfExists('grades');
     }
 }
