@@ -1,6 +1,6 @@
 <?php
 
-namespace mawdoo3\test\Models;
+namespace Mawdoo3\Drsk\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
