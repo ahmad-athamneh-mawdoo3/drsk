@@ -5,7 +5,7 @@ namespace mawdoo3\drsk\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use \mawdoo3\drsk\Models\SavedResult;
-
+use \mawdoo3\drsk\Connector;
 class SearchController extends Controller
 {
     /**
@@ -134,7 +134,7 @@ class SearchController extends Controller
      */
     public function testRoute(Request $request)
     {
-        dd($request->all());
+        dump( Connector::to('core\Auth')->isAuthed('asd','asdwe',['a'=>'b']));
         return ; 
     }
 }
