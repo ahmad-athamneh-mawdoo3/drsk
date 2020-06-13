@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class DivisionsMigration extends Migration
+class LessonsMigration extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,17 @@ class DivisionsMigration extends Migration
      */
     public function up()
     {
-        Schema::create('divisions', function (Blueprint $table) {
+        Schema::create('lessons', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name',300)->nullable();
-            $table->unsignedBigInteger('class_id')->nullable();
+            $table->unsignedBigInteger('grade_id')->nullable();
+            $table->unsignedBigInteger('course_id')->nullable();
             $table->unsignedBigInteger('school_id')->nullable();
-            $table->unsignedBigInteger('incharge_teacher')->nullable();
-            $table->unsignedBigInteger('program_id')->nullable();
+            $table->unsignedBigInteger('division_id')->nullable();
+            $table->unsignedBigInteger('teacher_id')->nullable();
+            $table->string('title',300)->nullable();
+            $table->unsignedBigInteger('type')->nullable();
+            $table->unsignedBigInteger('files_id')->nullable();
             $table->unsignedBigInteger('semester_id')->nullable();
-            $table->text('description')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
@@ -33,6 +35,6 @@ class DivisionsMigration extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('divisions');
+        Schema::dropIfExists('lessons');
     }
 }

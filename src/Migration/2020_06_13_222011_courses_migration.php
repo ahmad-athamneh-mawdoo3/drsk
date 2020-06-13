@@ -16,11 +16,11 @@ class CoursesMigration extends Migration
         Schema::create('courses', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name',300)->nullable();
-            $table->unsignedTinyInteger('program_id')->nullable();
-            $table->unsignedTinyInteger('school_id')->nullable();
-            $table->unsignedTinyInteger('semster_id')->nullable();
-            $table->unsignedTinyInteger('divison_id')->nullable();
-            $table->unsignedTinyInteger('subject_id')->nullable();
+            $table->unsignedBigInteger('program_id')->nullable();
+            $table->unsignedBigInteger('school_id')->nullable();
+            $table->unsignedBigInteger('semster_id')->nullable();
+            $table->unsignedBigInteger('divison_id')->nullable();
+            $table->unsignedBigInteger('subject_id')->nullable();
             $table->text('description')->nullable();
             $table->timestamps();
             $table->softDeletes();

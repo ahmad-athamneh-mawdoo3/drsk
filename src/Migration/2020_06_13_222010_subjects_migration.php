@@ -16,9 +16,9 @@ class SubjectsMigration extends Migration
         Schema::create('subjects', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name',300)->nullable();
-            $table->unsignedTinyInteger('program_id')->nullable();
-            $table->unsignedTinyInteger('school_id')->nullable();
-            $table->unsignedTinyInteger('grade_id')->nullable();
+            $table->unsignedBigInteger('program_id')->nullable();
+            $table->unsignedBigInteger('school_id')->nullable();
+            $table->unsignedBigInteger('grade_id')->nullable();
             $table->text('description')->nullable();
             $table->timestamps();
             $table->softDeletes();
