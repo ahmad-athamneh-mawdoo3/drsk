@@ -1,10 +1,10 @@
 <?php
 
-namespace mawdoo3\test\Controllers;
+namespace mawdoo3\drsk\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use \mawdoo3\test\Models\SavedResult;
+use \mawdoo3\drsk\Models\SavedResult;
 
 class SearchController extends Controller
 {
