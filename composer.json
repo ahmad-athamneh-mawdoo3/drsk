@@ -1,7 +1,7 @@
 {
     "name": "mawdoo3/drsk",
-    "type": "project",
-    "description": "Mawdoo3 drsk Task.",
+    "type": "library",
+    "description": "Mawdoo3 Darsk",
     "keywords": [
         "Darsk",
         "e-learning"
@@ -13,7 +13,10 @@
         "fruitcake/laravel-cors": "^1.0",
         "guzzlehttp/guzzle": "^6.3",
         "laravel/framework": "^7.0",
-        "laravel/tinker": "^2.0"
+        "laravel/tinker": "^2.0",
+        "mawdoo3/drsk.auth": "^1.0",
+        "mawdoo3/drsk.core": "^1.0",
+        "mawdoo3/drsk.exam": "^1.0"
     },
     "require-dev": {
         "facade/ignition": "^2.0",
@@ -30,7 +33,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "mawdoo3\\test\\TestServiceProvider"
+                "mawdoo3\\drsk\\DrskServiceProvider"
             ],
             "dont-discover": []
         }
@@ -38,7 +41,7 @@
     "autoload": {
         "psr-4": {
             "App\\": "app/",
-            "mawdoo3\\test\\": "src/"
+            "mawdoo3\\drsk\\": "src/"
         }
     },
     "autoload-dev": {
@@ -55,11 +58,11 @@
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
-            "@php artisan vendor:publish --provider='mawdoo3\\test\\TestServiceProvider'"
+            "@php artisan vendor:publish --provider='mawdoo3\\drsk\\DrskServiceProvider'"
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi",
-            "@php artisan vendor:publish --provider='mawdoo3\\test\\TestServiceProvider'"
+            "@php artisan vendor:publish --provider='mawdoo3\\drsk\\DrskServiceProvider'"
         ]
     }
 }

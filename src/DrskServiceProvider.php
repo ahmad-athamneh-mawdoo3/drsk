@@ -4,7 +4,7 @@ namespace mawdoo3\test;
 use Illuminate\Support\ServiceProvider;
 use mawdoo3\test\TaskInstall;
 
-class TestServiceProvider extends ServiceProvider
+class DrskServiceProvider extends ServiceProvider
 {
 
     /**
