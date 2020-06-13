@@ -17,7 +17,9 @@ class ExampleController extends Controller
      */
     public function testRoute(Request $request)
     {
-        dump( Connector::to('core\Auth')->isAuthed('asd','asdwe',['a'=>'b']));
+        dump( Connector::to('Core\Auth')->isAuthed('asd','asdwe',['a'=>'b']));
+        dump( Connector::to('Auth\Auth')->isAuthed('asd','asdwe',['a'=>'b']));
+        dump( Connector::to('Exam\Auth')->isAuthed('asd','asdwe',['a'=>'b']));
         return ; 
     }
 }

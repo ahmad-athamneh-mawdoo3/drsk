@@ -14,6 +14,7 @@ class Connector
     public function __call($name, $arguments)
     {
         $this->call = "\Mawdoo3\\Drsk\\$this->service";
+        // dd(\Mawdoo3\Drsk\Core\Auth::isAuthed());
         return call_user_func_array([$this->call, $name],$arguments);
     }
 
