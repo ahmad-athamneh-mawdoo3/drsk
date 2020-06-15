@@ -15,7 +15,8 @@
         "laravel/framework": "^7.0",
         "mawdoo3/drsk.auth": "^1.0",
         "mawdoo3/drsk.core": "^1.0",
-        "mawdoo3/drsk.exam": "^1.0"
+        "mawdoo3/drsk.exam": "^1.0",
+        "mawdoo3/drsk.announcement":"^1.0"
     },
     "require-dev": {
         "facade/ignition": "^2.0"
