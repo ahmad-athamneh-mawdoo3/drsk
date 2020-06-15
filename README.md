@@ -9,19 +9,19 @@
 
 ## installation 
 ##### intsall laravel in your folder :
-       laravel new announcement
+       laravel new drsk
 ##### or via composer :
-       composer create-project --prefer-dist laravel/laravel announcement
+       composer create-project --prefer-dist laravel/laravel drsk
 ##### clone package  in temp directory :
-       git clone https://github.com/ahmad-athamneh-mawdoo3/drsk-announcement.git temp.announcement
+       git clone https://github.com/ahmad-athamneh-mawdoo3/drsk.git temp.drsk
 ##### then the install command will be :
-        cp -r temp.announcement/. announcement/
+        cp -r temp.drsk/. drsk/
 ##### add this line in config/app.php to providers array :
-        Mawdoo3\Drsk\Announcement\DrskAnnouncementServiceProvider::class,
-##### run internal php server in announcement folder :
+        Mawdoo3\Drsk\DrskServiceProvider::class,
+##### run internal php server in drsk folder :
        php artisan serve
 ##### That's it !! :
-       http://127.0.0.1:8000/test.announcement
+       http://127.0.0.1:8000/test
 
 ## Configration
 
